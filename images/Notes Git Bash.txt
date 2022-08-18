@@ -1,0 +1,13 @@
+CD Documents/Nom du dossier
+git init
+git add index.html styles.css ou peu importe
+git commit -m “Ajout des fichiers html et css de base”
+
+Si nouveau projet :
+
+git remote add origin https://github.com/MelvinL02/Nomduprojet.git
+git branch -M main
+
+Sinon :
+
+git push -u origin main (git push origin main --force ou en derniers recours sur un projet solo)
