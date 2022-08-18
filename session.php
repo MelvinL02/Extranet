@@ -4,25 +4,18 @@
       header("location:login.php");
       exit();
    }
-   if(date("H")<18)
-      $bienvenue="Bonjour et bienvenue ".
-      $_SESSION["prenomNom"].
-      " dans votre espace personnel";
-   else
-      $bienvenue="Bonsoir et bienvenue ".
-      $_SESSION["prenomNom"].
-      " dans votre espace personnel";
-
-   //ouverture d'une connexion à la bdd agenda
-   $objetPdo=new PDO('mysql:host=localhost;dbname=extranet_gbaf','root','root');
-
-   //préparation de la requête
-   $pdoStat = $objetPdo->prepare('SELECT * FROM users');
-
-   //exécution de la requête
-   $executeIsOk = $pdoStat->execute();
-
-   $contacts = $pdoStat->fetchAll();
+   if($_SESSION["id"])
+      $bienvenue="".
+      $_SESSION["prenomNom"];
+   if($_SESSION["id"])
+      $username="".
+      $_SESSION["username"];
+   if($_SESSION["id"])
+      $nom="".
+      $_SESSION["nom"];
+   if($_SESSION["id"])
+      $prenom="".
+      $_SESSION["prenom"];
 ?>
 
 <!DOCTYPE html>
@@ -37,15 +30,11 @@
   
   <body>
    <div class="sucess">
-   <h2><?php echo $bienvenue?></h2>
-
-<?php foreach ($contacts as $contact): ?>
-
-   [ <a href="form_modification.php?numContact=<?= $contact['id'] ?>">Modifier</a> ]
- 
-<?php break ?> 
-<?php endforeach; ?>
-
+   <h2><?php echo htmlspecialchars($bienvenue);?></h2>
+   
+   [ <a href="session.php">Accueil</a> ]
+   <br>[ <a href="user_form.php">Modifier</a> ]
+   
    <br>[ <a href="deconnexion.php">Se déconnecter</a> ]
    </div>
 

@@ -1,5 +1,7 @@
 <?php
    session_start();
+   include("connexion.php");
+   
    @$nom=$_POST["nom"];
    @$prenom=$_POST["prenom"];
    @$username=$_POST["username"];
@@ -10,24 +12,33 @@
    @$valider=$_POST["valider"];
    $erreur="";
    if(isset($valider)){
-      if(empty($nom)) $erreur="Champ nom vide!";
-      elseif(empty($prenom)) $erreur="Champ prénom vide!";
-      elseif(empty($username)) $erreur="Champ utilisateur vide!";
-      elseif(empty($question)) $erreur="Champ question vide!";
-      elseif(empty($reponse)) $erreur="Champ reponse vide!";
-      elseif(empty($password)) $erreur="Champ mot de passe vide!";
-      elseif($password!=$repassword) $erreur="Mots de passe non identiques!";
+      if(empty($nom)) $erreur="Veuillez remplir le champ nom !";
+      elseif(empty($prenom)) $erreur="Veuillez remplir le champ prénom !";
+      elseif(empty($username)) $erreur="Veuillez remplir le champ utilisateur !";
+      elseif(empty($question)) $erreur="Veuillez remplir le champ question !";
+      elseif(empty($reponse)) $erreur="Veuillez remplir le champ reponse !";
+      elseif(empty($password)) $erreur="Veuillez remplir le champ mot de passe !";
+      elseif($password!=$repassword) $erreur="Mots de passe non identiques !";
       else{
-         include("connexion.php");
-         $stmt=$pdo->prepare("select id from users where username=? limit 1");
-         $stmt->execute(array($username));
+         $stmt=$pdo->prepare("SELECT * from users WHERE username=? limit 1");
+         $executeIsOk = $stmt->execute(array($username));
          $tab=$stmt->fetchAll();
          if(count($tab)>0)
             $erreur="L'utilisateur existe déjà!";
          else{
-            $ins=$pdo->prepare("insert into users(nom,prenom,username,password,question,reponse) values(?,?,?,?,?,?)");
-            if($ins->execute(array($nom,$prenom,$username,sha1($password),$question,$reponse)))
-               header("location:login.php");
+            $ins=$pdo->prepare("INSERT into users(nom,prenom,username,password,question,reponse) values(?,?,?,?,?,?)");
+         if($ins->execute(array($nom,$prenom,$username,sha1($password),$question,$reponse)));
+         
+         if($executeIsOk){
+      
+            $message = 'Le login a été crée !';
+            header("location:login.php");
+         } 
+         else{
+        
+            $message = "Echec de l'inscription";
+        
+           }
          }   
       }
    }
@@ -44,6 +55,7 @@
 <?php include_once('header.php'); ?> 
 
  <body>
+   
  <div id="container">
     
     <form name="fo" method="post" action="">

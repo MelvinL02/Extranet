@@ -1,17 +1,24 @@
 <?php
    session_start();
+   include("connexion.php");
+
    @$username = $_POST["username"];
    @$password = sha1($_POST["password"]);
    @$valider = $_POST["valider"];
    $erreur = "";
    if(isset($valider)){
-      include("connexion.php");
-      $stmt = $pdo->prepare("select * from users where username=? and password=? limit 1");
+      if(empty($username)) $erreur="Veuillez remplir le champ username !";
+      elseif(empty($password)) $erreur="Veuillez remplir le champ mot de passe !";
+      $stmt = $pdo->prepare("SELECT * FROM users WHERE username = ? AND password = ?");
       $stmt->execute(array($username,$password));
       $tab = $stmt->fetchAll();
       if(count($tab)>0){
+         $_SESSION["id"]=(strtoupper($tab[0]["id"]));
+         $_SESSION["username"]=ucfirst(strtolower($tab[0]["username"]));
+         $_SESSION["nom"]=ucfirst(strtolower($tab[0]["nom"]));
+         $_SESSION["prenom"]=ucfirst(strtolower($tab[0]["prenom"]));
          $_SESSION["prenomNom"]=ucfirst(strtolower($tab[0]["prenom"])).
-         " ".strtoupper($tab[0]["nom"]);
+         " ".($tab[0]["nom"]);
          $_SESSION["autoriser"]="oui";
          header("location:session.php");
       }
@@ -54,7 +61,7 @@
     
     <br>
     <p class="box-register1">Vous êtes nouveau ici ? <a href="inscription.php">S'inscrire</a></p>
-    <p class="box-register2">Mot de passe oublié ? <a href="inscription.php">Créer un nouveau mot de passe</a></p></div>
+    <p class="box-register2">Mot de passe oublié ? <a href="password_reset.php">Créer un nouveau mot de passe</a></p></div>
     </form>
  </div>
 
