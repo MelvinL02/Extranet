@@ -1,90 +1,205 @@
+/* Header */
+
+#header 
+{
+   height: 180px;
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+   border-bottom: solid black 2px;
+}
+
+#header #logo 
+{
+   display: block;
+   height: 180px;
+   margin-left: 50px;
+}
+
+#user 
+{
+   margin: 0 10px;
+   display: flex;
+   align-items: center;
+   align-self: center;
+   margin-right: 60px;
+}
+
+img#account
+{
+   display: flex;
+   margin-right: -10px;
+}
+
+#userLink p 
+{
+   margin: 0;
+}
+
+#userLink a 
+{
+   margin-left: 10px;
+   text-decoration: none;
+   color: #000;
+}
+
+#deco a 
+{
+   color: #539de2;
+}
+
+#user a:hover 
+{
+   margin-left: 10px;
+   text-decoration: none;
+   color: #FF0000;
+}
+
+/* Bordered form */
+
+#container
+{
+    width: auto;
+    margin: 5% auto;
+}
+
+#container h1
+{
+    width: 38%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+form 
+{ 
+    width:90%;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #f1f1f1;
+    background: url('images/fond_bleu.jpg');
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+section#form
+{
+   text-align: center;
+}
+
+/* Full-width inputs */
+
+input[type=text], input[type=password] 
+{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    text-align: center;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+
+input[type=submit] 
+{
+    background-color: #53af57;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 10%;
+}
+
+input[type=submit]:hover 
+{
+    background-color: white;
+    color: #53af57;
+    border: 0px solid #53af57;
+}
+
+.box-register1
+{
+  text-align:center;
+  margin: 20px;
+  margin-bottom:0px;
+  font-size: 20px;
+}
+
+.box-register2
+{
+  text-align:center;
+  margin: 20px;
+  margin-bottom:0px;
+  font-size: 20px;
+}
+
+.erreur
+{
+    text-align: center;
+    color : red;
+    margin : 20px;
+    font-size: 20px;
+}
+
+/* Index Home */
+
 *{
    margin : 0px;
    padding : 0px;
    box-sizing: border-box;
 }
 
-html
-{
-   margin: 0;
-   height: 100%;
-   background: url('images/fond_bleu.jpg');
-   background-size: cover;
-}
-
-img 
-{
-   width: auto; 
-   max-height: 100%; 
-}
-
 body
 {
+    font-family: 'Open Sans', sans-serif;
     min-height: 100%;
     background: url('images/fond_bleu.jpg');
     background-size: cover;
 }
 
-#header 
+main 
 {
-   height: 150px;
-   display: flex;
-   justify-content: space-between;
-   align-items: flex-start;
-   border-bottom: solid black 1px;
+   height: 100%;
+   width: 100%;
+   padding-bottom: 15px;
+   margin: 0;
 }
 
-#user 
+h1, h2, h3 
 {
-   margin: 0 10px;
-   font-weight: 400;
-   display: flex;
-   align-items: center;
-   align-self: center;
-   margin-right: 50px;
+   font-family: 'Martel', serif;
+   text-decoration: underline;
+   text-decoration-color: #FF0000;
 }
 
-.log
+h1 
 {
-   float: right;
-}
-
-.balise1
-{
-   border: none;
-   border-top: 3px solid #333;
-   color: #333;
-   overflow: visible;
+   font-size: 1.8em;
    text-align: center;
-   height: 5px;
-   margin: 0px;
-   padding: 0px;
 }
 
-h1
+h2 
 {
-   font-weight: 200;
+   font-size: 1.3em;
+   margin: 20px 0; 
+}
+
+h3 
+{
+   margin-bottom: 20px;
+}
+
+u
+{
    text-decoration : underline;
    text-decoration-color: red;
-   margin: 50px;
-   padding: 0px;
-   text-align: center;
 }
 
 #extranet
 {
-   margin : 0px;
+   margin-top: 50px;
    background-position-x: center;
-   text-align: center;
-}
-
-h2
-{
-   font-weight: 1;
-   font-size: large;
-   margin: 20px;
-   margin-top: -10px;
-   padding: 0px;
    text-align: center;
 }
 
@@ -93,83 +208,98 @@ section
    display: flex;
    flex-direction: column;
    align-items: center;
-   border-width: 2px;
-   border-style: solid;
-   border-color: black;
-   margin: 100px 100px 20px;
+   margin: 50px 50px 10px 50px;
    padding: 0px;
 }
 
-form
+#presentation .presentationListActeurs 
 {
-   padding: 0px;
-   margin: 0px;
-   text-align: center;
+   display: flex;
+   justify-content: space-around;
 }
 
-#account section {
-   padding: 30px;
-   background-color: #FFF;
+#illustration 
+{
+   display: flex;
+   justify-content: center;
+}
+
+#illustration img 
+{
+   display: block;
+   width: 110%;
+   border: solid 1px #000000;
+   max-width: 1000px;
+}
+
+#conteneur_acteur 
+{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: 50px 50px 10px 50px;
+   margin-bottom: 10px;
+}
+
+#acteurs 
+{
+   margin-top: 50px;
+}
+
+.acteur 
+{
+   width: 98%;
+   margin: 10px 0;
+   padding: 20px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   background-color: #fff;
+   border: solid 1px #FF0000;
    border-radius: 10px;
 }
-#account input[type="submit"] {
-   background-image: linear-gradient(rgb(0, 0, 0) , #a0c3e5);
+
+.presentation_acteur 
+{
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+}
+
+.logo_acteur 
+{
+   width: 200px;
+   border: solid 1px #000000;
+}
+
+.description 
+{
+   margin-left: 20px;
+   width: 60%;
+}
+
+.votesButton 
+{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.homeVotes 
+{
+   display: flex;
+}
+
+.button 
+{
+   align-self: flex-end;
+   white-space: nowrap;
+   background-image: linear-gradient(#ff6363 , #FF0000);
    border-radius: 10px;
    padding: 8px;
+   text-decoration: none;
+   color: #fff;
    font-size: 0.8em;
-   font-weight: bold;;
-}
-#account input[type="submit"]:hover {
-   opacity: 0.8;
-}
-
-.element1
-{
-   display: flex;
-   border: 2px rgb(0, 0, 0) solid;
-   margin: 50px;
-   height: 100px; /* Sets the height */
-   width: 80em; /* Sets the width */
-}
-
-.element2
-{
-   display: flex;
-   border: 2px rgb(0, 0, 0) solid;
-   margin: 20px;
-   height: 100px; /* Sets the height */
-   width: 80em; /* Sets the width */
-}
-
-.element3
-{
-   display: flex;
-   border: 2px rgb(0, 0, 0) solid;
-   margin: 20px;
-   height: 100px; /* Sets the height */
-   width: 80em; /* Sets the width */
-}
-
-.element4
-{
-   display: flex;
-   border: 2px rgb(0, 0, 0) solid;
-   margin: 20px;
-   height: 100px; /* Sets the height */
-   width: 80em; /* Sets the width */
-}
-
-h3
-{
-   margin: auto;
-   margin-right: 700px;
-}
-
-button
-{
-height: auto;
-width: auto;
-margin-left: 0px;
 }
 
 .balise2
