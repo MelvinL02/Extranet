@@ -5,42 +5,57 @@
    if($_SESSION["id"])
    $bienvenue=" ".
    $_SESSION["id"];
+   $erreur = "";
 
 ?>
 
 <!DOCTYPE html>
-<html>
-  <head>
-   <meta charset="utf-8" />
-   <link rel="stylesheet" href="style.css" />
-   <title>Le-Groupement-Banque-Assurance-Français</title>
-  </head>
- 
-<?php include_once('header.php'); ?> 
-  
- <body>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="login.css" />
+        <title>Le-Groupement-Banque-Assurance-Français</title>
+    </head>
+    
+  <body>
+        <header id="header">
+         <a href="login.php"><img id="logo" src="images/gbaf.png" alt="Logo du GBAF" title="Le Groupement Banque-Assurance Français" /></a> 
+         <h2>Le Groupement Banque-Assurance Français</h2>
+         <hr class="balise1" />  
+        </header>
 
-  <div id="container">
+    <div id="container">
 
-  <form action="password_update.php" method="post">
-  <h1>Changements du mot de passe</h1>
+ <!-- Zone de connexion -->
 
-  <div class = "left">
-  <input type="hidden" name="id" value="<?php echo htmlspecialchars($_SESSION["id"])?>"></p>
- 
-  <br><p><label for="password">Mot de passe</label>
-  <input type="password" id="password" name="password"></p>
+    <form name="fo" method="post" action="">
+    <h1>Changements du mot de passe</h1>
 
-  <br><p><label for="password">Confirmer Mot de passe</label>
-  <input type="password" id="repassword" name="repassword"></p>
- 
-  <div class = "center">
-  <button type="submit" name="valider" value="VALIDER">Confirmer</button>
-  </div>
-  </form>
-  </div>
+    <div class = "left">
+    <input type="hidden" name="id" value="<?php echo htmlspecialchars($_SESSION["id"])?>"></p>
+    
+    <br><p><label for="password">Mot de passe</label>
+    <input type="password" id="password" name="password"></p>
+    
+    <br><p><label for="password">Confirmer Mot de passe</label>
+    <input type="password" id="repassword" name="repassword"></p>
+    
+    <div class = "center">
+    <input type="submit" name="valider" value="Confirmer"/>
+    </div>
 
-<?php include_once('footer.php'); ?>
+    <div class="erreur">
+    <?php echo $erreur ?></div>
+    </form>
+    </div>
 
- </body>
+  <footer>
+   <hr class="balise2" />
+   <span class="vertical-line"></span> 
+   <a href="https://openclassrooms.com" title="Vous ne le regretterez pas !" style="color:white" >Mentions légales</a>
+   <span class="vertical-line"></span>
+   <a href="https://openclassrooms.com" title="Vous ne le regretterez pas !" style="color:white" >Contact</a>
+   <span class="vertical-line"></span>  
+  </footer>
+  </body>
 </html>

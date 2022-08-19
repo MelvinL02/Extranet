@@ -9,7 +9,7 @@
      empty($data['password']) ||
      empty($data['repassword'])) {
     
-     die('Merci de remplir tous les champs !');
+    die('Merci de remplir tous les champs !');
     }
 
   if ($data['password'] !== $data['repassword']) {

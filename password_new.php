@@ -22,20 +22,24 @@ $erreur="Utilisateur incorrect!";
 ?>
 
 <!DOCTYPE html>
-<html>
- <head>
-   <meta charset="utf-8" />
-   <link rel="stylesheet" href="login.css" />
-   <title>Le-Groupement-Banque-Assurance-Français</title>
- </head>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="login.css" />
+        <title>Le-Groupement-Banque-Assurance-Français</title>
+    </head>
+    
+  <body>
+        <header id="header">
+         <a href="login.php"><img id="logo" src="images/gbaf.png" alt="Logo du GBAF" title="Le Groupement Banque-Assurance Français" /></a> 
+         <h2>Le Groupement Banque-Assurance Français</h2>
+         <hr class="balise1" />  
+        </header>
 
-<?php include_once('header.php'); ?> 
+    <div id="container">
 
- <body>
+ <!-- Zone de connexion -->
 
- <div id="container">
-  
- <!-- Zone d'idendification -->
     <form name="fo" method="post" action="">
     <h1>Changement du mot de passe</h1>
 
@@ -44,7 +48,7 @@ $erreur="Utilisateur incorrect!";
     <input type="text" name="username" required placeholder="Utilisateur" /><br /></div>
     
     <div class = "center">
-    <button type="submit" name="valider" value="VALIDER">Confirmer</button>
+    <input type="submit" name="valider" value="Confirmer"/>
     </div>
 
     <div class="erreur">
@@ -52,8 +56,13 @@ $erreur="Utilisateur incorrect!";
     </form>
     </div>
 
-<?php include_once('footer.php'); ?>
-
+  <footer>
+   <hr class="balise2" />
+   <span class="vertical-line"></span> 
+   <a href="https://openclassrooms.com" title="Vous ne le regretterez pas !" style="color:white" >Mentions légales</a>
+   <span class="vertical-line"></span>
+   <a href="https://openclassrooms.com" title="Vous ne le regretterez pas !" style="color:white" >Contact</a>
+   <span class="vertical-line"></span>  
+  </footer>
   </body>
 </html>
-
