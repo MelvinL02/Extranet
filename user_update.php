@@ -27,6 +27,7 @@
        // vérifier si la requête d'insertion a réussi
        if($stmt){
        echo 'Les données ont bien été insérés';
+       header("location:user_form.php");
        }else{
        echo "Une erreur est survenue !";
        }
@@ -55,6 +56,7 @@
         // vérifier si la requête d'insertion a réussi
          if($stmt){
             echo 'Les données ont bien été insérés';
+            header("location:user_form.php");
           }else{
             echo "Une erreur est survenue !";
           }
@@ -78,6 +80,7 @@
         // vérifier si la requête d'insertion a réussi
          if($stmt){
             echo 'Les données ont bien été insérés';
+            header("location:user_form.php");
           }else{
             echo "Une erreur est survenue !";
           }
@@ -101,6 +104,7 @@
         // vérifier si la requête d'insertion a réussi
          if($stmt){
             echo 'Les données ont bien été insérés';
+            header("location:user_form.php");
           }else{
             echo "Une erreur est survenue !";
           }
@@ -125,6 +129,7 @@
          // vérifier si la requête d'insertion a réussi
          if($stmt){
            echo 'Les données ont bien été insérés';
+           header("location:user_form.php");
          }else{
            echo "Une erreur est survenue !";
          }
