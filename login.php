@@ -28,20 +28,24 @@
 ?>
 
 <!DOCTYPE html>
-<html>
- <head>
-   <meta charset="utf-8" />
-   <link rel="stylesheet" href="login.css" />
-   <title>Le-Groupement-Banque-Assurance-Français</title>
- </head>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="login.css" />
+        <title>Le-Groupement-Banque-Assurance-Français</title>
+    </head>
+    
+  <body>
+        <header id="header">
+         <a href="login.php"><img id="logo" src="images/gbaf.png" alt="Logo du GBAF" title="Le Groupement Banque-Assurance Français" /></a> 
+         <h2>Le Groupement Banque-Assurance Français</h2>
+         <hr class="balise1" />  
+        </header>
 
-<?php include_once('header.php'); ?> 
-
- <body>
-
- <div id="container">
+    <div id="container">
 
  <!-- Zone de connexion -->
+
     <form name="fo" method="post" action="">
     <h1>Connexion</h1>
     
@@ -61,11 +65,17 @@
     
     <br>
     <p class="box-register1">Vous êtes nouveau ici ? <a href="inscription.php">S'inscrire</a></p>
-    <p class="box-register2">Mot de passe oublié ? <a href="password_reset.php">Créer un nouveau mot de passe</a></p></div>
+    <p class="box-register2">Mot de passe oublié ? <a href="password_new.php">Créer un nouveau mot de passe</a></p></div>
     </form>
- </div>
+    </div>
 
-<?php include_once('footer.php'); ?>
- 
- </body>
+  <footer>
+   <hr class="balise2" />
+   <span class="vertical-line"></span> 
+   <a href="https://openclassrooms.com" title="Vous ne le regretterez pas !" style="color:white" >Mentions légales</a>
+   <span class="vertical-line"></span>
+   <a href="https://openclassrooms.com" title="Vous ne le regretterez pas !" style="color:white" >Contact</a>
+   <span class="vertical-line"></span>  
+  </footer>
+  </body>
 </html>
