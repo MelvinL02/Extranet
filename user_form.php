@@ -1,22 +1,6 @@
 <?php
    session_start();
-   if($_SESSION["autoriser"]!="oui"){
-      header("location:login.php");
-      exit();
-   }
-   if($_SESSION["id"])
-      $bienvenue="".
-      $_SESSION["prenomNom"];
-   if($_SESSION["id"])
-      $username="".
-      $_SESSION["username"];
-   if($_SESSION["id"])
-      $nom="".
-      $_SESSION["nom"];
-   if($_SESSION["id"])
-      $prenom="".
-      $_SESSION["prenom"];
-
+   include("user_logged.php");
 ?>
 
 <!DOCTYPE html>
@@ -110,7 +94,7 @@
   </div>
 
     <footer>
-       <hr class="balise2" />
+       <hr class="baliseFooter" />
        <span class="vertical-line"></span> 
        <a href="https://openclassrooms.com" title="Vous ne le regretterez pas !" style="color:white" >Mentions légales</a>
        <span class="vertical-line"></span>
