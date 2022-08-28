@@ -31,30 +31,30 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="login.css" />
+        <link rel="stylesheet" href="style.css" />
         <title>Le-Groupement-Banque-Assurance-Français</title>
     </head>
     
   <body>
-        <header id="header">
+        <header id="login">
          <a href="login.php"><img id="logo" src="images/gbaf.png" alt="Logo du GBAF" title="Le Groupement Banque-Assurance Français" /></a> 
          <h2>Le Groupement Banque-Assurance Français</h2>
-         <hr class="balise1" />  
+         <hr class="baliseHeader" />
         </header>
 
     <div id="container">
 
  <!-- Zone de connexion -->
 
-    <form name="fo" method="post" action="">
-    <h1>Connexion</h1>
+    <form name="" method="post" action="">
+    <h1>Connectez-vous</h1>
     
     <div class = "left">
-    <label><b>Nom d'utilisateur</b></label>
+    <label><b>Nom d'utilisateur :</b></label>
     <input type="text" name="username" placeholder="Utilisateur" /><br /></div>
     
     <div class = "left">
-    <label><b>Mot de passe</b></label>
+    <label><b>Mot de passe :</b></label>
     <input type="password" name="password" placeholder="Mot de passe" /><br /></div>
     
     <div class = "center">
@@ -63,14 +63,13 @@
     <div class="erreur">
     <?php echo $erreur ?></div>
     
-    <br>
     <p class="box-register1">Vous êtes nouveau ici ? <a href="inscription.php">S'inscrire</a></p>
     <p class="box-register2">Mot de passe oublié ? <a href="password_new.php">Créer un nouveau mot de passe</a></p></div>
     </form>
     </div>
 
   <footer>
-   <hr class="balise2" />
+   <hr class="baliseFooter" />
    <span class="vertical-line"></span> 
    <a href="https://openclassrooms.com" title="Vous ne le regretterez pas !" style="color:white" >Mentions légales</a>
    <span class="vertical-line"></span>
