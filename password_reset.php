@@ -13,7 +13,7 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="styles.css" />
         <title>Le-Groupement-Banque-Assurance-Français</title>
     </head>
     
@@ -29,16 +29,18 @@
  <!-- Zone de connexion -->
 
     <form name="fo" method="post" action="">
-    <h1>Changements du mot de passe</h1>
+    <h1>Mot de passe oublié</h1>
 
     <div class = "left">
-    <input type="hidden" name="id" value="<?php echo htmlspecialchars($_SESSION["id"])?>"></p>
+    <input type="hidden" name="id" value="<?php echo htmlspecialchars($_SESSION["id"])?>"></div>
     
-    <br><p><label for="password">Mot de passe</label>
-    <input type="password" id="password" name="password"></p>
+    <div class = "left">
+    <b><label for="password">Mot de passe :</label></b>
+    <input type="password" id="password" name="password" placeholder="Mot de passe"></br></div>
     
-    <br><p><label for="password">Confirmer Mot de passe</label>
-    <input type="password" id="repassword" name="repassword"></p>
+    <div class = "left">
+    <br><b><label for="password">Confirmer le mot de passe :</label></b>
+    <input type="password" id="repassword" name="repassword" placeholder="Confirmer le mot de passe"></div>
     
     <div class = "center">
     <input type="submit" name="valider" value="Confirmer"/>

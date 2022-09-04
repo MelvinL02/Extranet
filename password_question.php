@@ -27,7 +27,7 @@ else
 <html lang="fr">
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="styles.css" />
         <title>Le-Groupement-Banque-Assurance-Français</title>
     </head>
     
@@ -43,12 +43,15 @@ else
  <!-- Zone de connexion -->
 
     <form name="fo" method="post" action="">
-    <h1>Changement du mot de passe</h1>
-    <br><label><h2>Question secrète :</h2></label>
-    <br><h2><?php echo htmlspecialchars($_SESSION["question"]);?></h2>
+    <h1>Mot de passe oublié</h1>
+    
+    <div class = "center">
+    <b>Question secrète :</b><br>
+    <br><?php echo htmlspecialchars($_SESSION["question"]);?>
+    </div>
 
     <div class = "left">
-    <label><b>Réponse à la question secrète</b></label>
+    <label><b>Réponse à la question secrète :</b></label>
     <input type="text" name="reponse" required placeholder="Réponse" /><br /></div>
     
     <div class = "center">

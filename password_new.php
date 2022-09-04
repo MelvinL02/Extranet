@@ -25,7 +25,7 @@ $erreur="Utilisateur incorrect!";
 <html lang="fr">
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="styles.css" />
         <title>Le-Groupement-Banque-Assurance-Français</title>
     </head>
     
@@ -41,10 +41,10 @@ $erreur="Utilisateur incorrect!";
  <!-- Zone de connexion -->
 
     <form name="fo" method="post" action="">
-    <h1>Changement du mot de passe</h1>
+    <h1>Mot de passe oublié</h1>
 
     <div class = "left">
-    <label><b>Nom d'utilisateur</b></label>
+    <label><b>Nom d'utilisateur :</b></label>
     <input type="text" name="username" required placeholder="Utilisateur" /><br /></div>
     
     <div class = "center">
