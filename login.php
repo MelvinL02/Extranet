@@ -31,7 +31,7 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="styles.css" />
         <title>Le-Groupement-Banque-Assurance-Français</title>
     </head>
     

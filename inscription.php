@@ -47,7 +47,7 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="styles.css" />
         <title>Le-Groupement-Banque-Assurance-Français</title>
     </head>
     
@@ -66,31 +66,31 @@
     <h1>Inscription</h1>
 
     <div class = "left">
-    <label><b>Nom</b></label>
+    <label><b>Nom :</b></label>
     <input type="text" name="nom" placeholder="Nom" /><br /></div>
 
     <div class = "left">
-    <label><b>Prénom</b></label>
+    <label><b>Prénom :</b></label>
     <input type="text" name="prenom" placeholder="Prénom" /><br /></div>
     
     <div class = "left">
-    <label><b>Nom d'utilisateur</b></label>
+    <label><b>Nom d'utilisateur :</b></label>
     <input type="text" name="username" placeholder="Utilisateur" /><br /></div>
     
     <div class = "left">
-    <label><b>Mot de passe</b></label>
+    <label><b>Mot de passe :</b></label>
     <input type="password" name="password" placeholder="Mot de passe" /><br /></div>
 
     <div class = "left">
-    <label><b>Confirmation du Mot de passe</b></label>
+    <label><b>Confirmation du mot de passe :</b></label>
     <input type="password" name="repassword" placeholder="Confirmer le Mot de passe" /><br /></div>
     
     <div class = "left">
-    <label><b>Question secrète</b></label>
+    <label><b>Question secrète :</b></label>
     <input type="text" name="question" placeholder="Question" /><br /></div>
 
     <div class = "left">
-    <label><b>Réponse à la question secrète</b></label>
+    <label><b>Réponse à la question secrète :</b></label>
     <input type="text" name="reponse" placeholder="Réponse" /><br /></div>
 
     <div class = "center">
@@ -98,10 +98,6 @@
 
     <div class="erreur">
     <?php echo $erreur ?></div>
-    
-    <br>
-    <p class="box-register1">Vous êtes nouveau ici ? <a href="inscription.php">S'inscrire</a></p>
-    <p class="box-register2">Mot de passe oublié ? <a href="password_new.php">Créer un nouveau mot de passe</a></p></div>
     </form>
     </div>
 
