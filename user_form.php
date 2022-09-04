@@ -1,13 +1,13 @@
 <?php
    session_start();
-   include("user_logged.php");
+   include("variables.php");
 ?>
 
 <!DOCTYPE html>
 <html lang="fr">
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="styles.css" />
         <title>Le-Groupement-Banque-Assurance-Français</title>
     </head>
     
@@ -32,7 +32,6 @@
         <input type="hidden" name="id" value="<?php echo htmlspecialchars($_SESSION["id"])?>"/>
         <br><p><label for="username">Nom d'utilisateur : </label><br />
         <br> <input type="text" name="username" id="username" value="<?php echo $username?>" /></p></b>
-            <p class="error"></p>
             <p class="confirm"></p>
         <br><input type="submit" name="send" value="Valider">
         </form>
@@ -44,10 +43,8 @@
         <input type="hidden" name="id" value="<?php echo htmlspecialchars($_SESSION["id"])?>" />
         <br><p><label for="password">Mon nouveau mot de passe : </label><br />
         <br><input type="password" name="password" id="password" required /></p></b>
-            <p class="error"></p>
             <br><p><label for="repassword">Confirmation du nouveau mot de passe : </label><br />
             <br><input type="password" name="repassword" id="repassword" required /></p></b>
-            <p class="error"></p>
             <p class="confirm"></p>
         <br><input type="submit" name="send_1" value="Valider">
         </form>
@@ -59,7 +56,6 @@
         <input type="hidden" name="id" value="<?php echo htmlspecialchars($_SESSION["id"])?>" />
         <br><p><label for="nom">Nom : </label><br />
         <br><input type="text" name="nom" id="nom" value="<?php echo $nom?>"  /></p></b>
-            <p class="error"></p>
             <p class="confirm"></p>
         <br><input type="submit" name="send_2" value="Valider">
         </form>
@@ -71,7 +67,6 @@
         <input type="hidden" name="id" value="<?php echo htmlspecialchars($_SESSION["id"])?>" />
         <br><p><label for="prenom">Prénom : </label><br />
         <br><input type="text" name="prenom" id="prenom" value="<?php echo $prenom?>"  /></p></b>
-            <p class="error"></p>
             <p class="confirm"></p>
         <br><input type="submit" name="send_3" value="Valider">
         </form>

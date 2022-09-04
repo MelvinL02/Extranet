@@ -1,13 +1,13 @@
 <?php
    session_start();
-   include("user_logged.php");
+   include("variables.php");
 ?>
 
 <!DOCTYPE html>
 <html lang="fr">
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="styles.css" />
         <title>Le-Groupement-Banque-Assurance-Français</title>
     </head>
     
@@ -38,7 +38,7 @@
             </ul>
         </div>
         <p>Même s’il existe une forte concurrence entre ces entités, elles vont toutes travailler de la même façon pour gérer près de 80 millions de comptes sur le territoire national. Le GBAF est le représentant de la profession bancaire et des assureurs sur tous les axes de la réglementation financière française. Sa mission est de promouvoir l'activité bancaire à l’échelle nationale. C’est aussi un interlocuteur privilégié des pouvoirs publics.</p>
-        <figure id="illustration">
+        <br><figure id="illustration">
             <img src="images/illustrationfrance.jpg" alt="illustration"/>
         </figure>
   </section>   
@@ -65,7 +65,7 @@
             <p><span class="thumbs-up"></span></p>
             <p><span class="thumbs-down"></span></p>
           </div>
-          <a class="button" href="page_acteur_formetco.php">Lire la suite</a>
+          <a class="button" href="page_acteur_formetco.php?id=1">Lire la suite</a>
             </div>
           </div>
 
@@ -86,7 +86,7 @@
             <p><span class="thumbs-up"></span></p>
             <p><span class="thumbs-down"></span></p>
           </div>
-          <a class="button" href="">Lire la suite</a>
+          <a class="button" href="page_acteur_protectpeople.php?id=2">Lire la suite</a>
             </div>
           </div>
 
@@ -107,7 +107,7 @@
             <p><span class="thumbs-up"></span></p>
             <p><span class="thumbs-down"></span></p>
           </div>
-          <a class="button" href="">Lire la suite</a>
+          <a class="button" href="page_acteur_dsafrance.php?id=3">Lire la suite</a>
             </div>
           </div>
 
@@ -128,7 +128,7 @@
             <p><span class="thumbs-up"></span></p>
             <p><span class="thumbs-down"></span></p>
           </div>
-          <a class="button" href="">Lire la suite</a>
+          <a class="button" href="page_acteur_cde.php?id=4">Lire la suite</a>
             </div>
           </div>
    </div>       

@@ -1,6 +1,6 @@
 <?php
    session_start();
-   include("user_logged.php");
+   include("variables.php");
    
    if(isset($_POST['send'])){
     $username=$_POST["username"];
@@ -11,7 +11,7 @@
    die('Erreur : '.$e->getMessage());
    }
       
-   if(empty($username)) $erreur="Veuillez remplir le champ utilisateur !";
+   if(empty($username)) header("location:user_form.php");
    else{
     
     $sql = "UPDATE users SET username = :username WHERE id = :id";
@@ -22,8 +22,8 @@
        
     // vérifier si la requête d'insertion a réussi
    if($stmt){
-    echo 'Les données ont bien été insérés';
-    header("location:user_form.php");
+    echo "Vos données ont été mises à jour.";
+    header("Location: $referer");
   
    }else{
     echo "Une erreur est survenue !";
@@ -44,7 +44,7 @@
     die('Erreur : '.$e->getMessage());
     }
 
-   if(empty($password)) $erreur="Veuillez remplir le champ mot de passe !";
+   if(empty($password)) header("location:user_form.php");
    else{
 
     $sql = "UPDATE users SET password = :password WHERE id = :id";
@@ -55,8 +55,8 @@
       
     // vérifier si la requête d'insertion a réussi
    if($stmt){
-    echo 'Les données ont bien été insérés';
-    header("location:user_form.php");
+    echo "Vos données ont été mises à jour.";
+    header("Location: $referer");
        
    }else{
     echo "Une erreur est survenue !";
@@ -73,7 +73,7 @@
      die('Erreur : '.$e->getMessage());
      }
 
-   if(empty($nom)) $erreur="Veuillez remplir le champ nom !";
+   if(empty($nom)) header("location:user_form.php");
    else{
 
     $sql = "UPDATE users SET nom = :nom WHERE id = :id";
@@ -84,8 +84,8 @@
       
     // vérifier si la requête d'insertion a réussi
    if($stmt){
-    echo 'Les données ont bien été insérés';
-    header("location:user_form.php");
+    echo "Vos données ont été mises à jour.";
+    header("Location: $referer");
    
    }else{
     echo "Une erreur est survenue !";
@@ -102,7 +102,7 @@
    die('Erreur : '.$e->getMessage());
    }
   
-  if(empty($prenom)) $erreur="Veuillez remplir le champ prénom !";
+  if(empty($prenom)) header("location:user_form.php");
   else{
 
    $sql = "UPDATE users SET prenom = :prenom WHERE id = :id";
@@ -113,8 +113,8 @@
       
    // vérifier si la requête d'insertion a réussi
    if($stmt){
-    echo 'Les données ont bien été insérés';
-    header("location:user_form.php");
+    echo "Vos données ont été mises à jour.";
+    header("Location: $referer");
     
    }else{
     echo "Une erreur est survenue !";
@@ -132,8 +132,8 @@
    die('Erreur : '.$e->getMessage());
    }
 
-  if(empty($question)) $erreur="Veuillez remplir le champ question !";
-  elseif(empty($reponse)) $erreur="Veuillez remplir le champ reponse !";
+  if(empty($question)) header("location:user_form.php");
+  elseif(empty($reponse)) header("location:user_form.php");
   else{
 
    $sql = "UPDATE users SET question = :question, reponse = :reponse WHERE id = :id";
@@ -145,13 +145,16 @@
 
    // vérifier si la requête d'insertion a réussi
   if($stmt){
-   echo 'Les données ont bien été insérés';
-   header("location:user_form.php");
+   echo "Vos données ont été mises à jour.";
+   header("Location: $referer");
   }else{
    echo "Une erreur est survenue !";
    } 
   }
  }
 ?>
+
+
+
             
 
