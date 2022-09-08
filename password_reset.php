@@ -2,37 +2,38 @@
    session_start();
    include("connexion.php");
 
-   if($_SESSION["id"])
-   $bienvenue=" ".
-   $_SESSION["id"];
+   if($_SESSION["id_user"])
+   $bienvenue="".
+   $_SESSION["id_user"];
    $erreur = "";
-
 ?>
 
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="stylesheet" href="styles.css" />
-        <title>Le-Groupement-Banque-Assurance-Français</title>
-    </head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/fav_icon_gbaf.png">
+    <title>Le Groupement Banque Assurance Français</title>
+  </head>
     
   <body>
         <header id="login">
-         <a href="login.php"><img id="logo" src="images/gbaf.png" alt="Logo du GBAF" title="Le Groupement Banque-Assurance Français" /></a> 
+         <a href="login.php"><img id="logo" src="images/gbaf.png" alt="Logo du GBAF" title="Le Groupement Banque-Assurance Français"></a> 
          <h2>Le Groupement Banque-Assurance Français</h2>
-         <hr class="baliseHeader" />  
+         <hr class="baliseHeader">  
         </header>
 
+<!-- Zone de connexion -->
+
+    <main>
     <div id="container">
-
- <!-- Zone de connexion -->
-
-    <form name="fo" method="post" action="">
+    <form action="password_update.php" method="post">
     <h1>Mot de passe oublié</h1>
 
     <div class = "left">
-    <input type="hidden" name="id" value="<?php echo htmlspecialchars($_SESSION["id"])?>"></div>
+    <input type="hidden" name="id_user" value="<?php echo htmlspecialchars($_SESSION["id_user"])?>"></div>
     
     <div class = "left">
     <b><label for="password">Mot de passe :</label></b>
@@ -50,14 +51,14 @@
     <?php echo $erreur ?></div>
     </form>
     </div>
+    </main>
 
-  <footer>
-   <hr class="baliseFooter" />
-   <span class="vertical-line"></span> 
-   <a href="https://openclassrooms.com" title="Vous ne le regretterez pas !" style="color:white" >Mentions légales</a>
-   <span class="vertical-line"></span>
-   <a href="https://openclassrooms.com" title="Vous ne le regretterez pas !" style="color:white" >Contact</a>
-   <span class="vertical-line"></span>  
-  </footer>
+   <footer>
+        <span class="vertical-line"></span> 
+        <a href="#" style="color:white" >Mentions légales</a>
+        <span class="vertical-line"></span>
+        <a href="#" style="color:white" >Contact</a>
+        <span class="vertical-line"></span>
+   </footer>
   </body>
 </html>

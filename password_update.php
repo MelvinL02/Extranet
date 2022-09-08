@@ -4,8 +4,12 @@
   
   $password = sha1($_POST["password"]);
   $data = $_POST;
+  $message = "";
+  $erreur = "";
 
-  if(empty($data['id']) ||
+  // Si les champs sont vides = message d'erreur
+
+  if(empty($data['id_user']) ||
      empty($data['password']) ||
      empty($data['repassword'])) {
     
@@ -16,24 +20,26 @@
     die('Les entrées ne correspondent pas !');   
   }
 
-    //préparation de la requête
-    $pdoStat = $pdo->prepare('UPDATE users set password=:password WHERE id=:num LIMIT 1');
+    // Préparation de la requête
 
-    $pdoStat->bindValue(':num', $_POST['id'], PDO::PARAM_INT);
+    $pdoStat = $pdo->prepare('UPDATE users set password=:password WHERE id_user=:num LIMIT 1');
+
+    $pdoStat->bindValue(':num', $_POST['id_user'], PDO::PARAM_INT);
     $pdoStat->bindValue(':password', $password, PDO::PARAM_STR);
 
-    //éxécution de la requête préparée
+    // Exécution de la requête préparée
+
     $executeIsOk = $pdoStat->execute();
 
   if($executeIsOk){
       
-   $message = 'Le mot de passe a été mis à jour dans la bdd';
+   $message = "";
    header("location:login.php");
 
   } 
   else{
 
-   $message = 'Echec de la modification';
+   $erreur = "Echec de l'envoi";
 
   }
 ?>
