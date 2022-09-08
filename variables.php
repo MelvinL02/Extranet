@@ -1,22 +1,21 @@
 <?php
-   if($_SESSION["autoriser"]!="oui"){
-      header("location:login.php");
-      exit();
-   }
 
-   $referer = $_SERVER['HTTP_REFERER'];
+// Accès à la session si connecté sinon redirection sur la page de login
 
-   if($_SESSION["id"])
-      $bienvenue="".
-      $_SESSION["prenomNom"];
-   if($_SESSION["id"])
-      $username="".
-      $_SESSION["username"];
-   if($_SESSION["id"])
-      $nom="".
-      $_SESSION["nom"];
-   if($_SESSION["id"])
-      $prenom="".
-      $_SESSION["prenom"];
-      $erreur = "";
+if($_SESSION["autoriser"]!="oui"){
+   header("location:login.php");
+   exit();
+
+// Récupération des informations lors de la création de session   
+
+} else {
+$_SESSION["id_user"];
+$_SESSION["prenomNom"];
+$_SESSION["username"];
+$_SESSION["nom"];
+$_SESSION["prenom"];
+$referer = $_SERVER['HTTP_REFERER'];
+$message = "";
+$erreur = "";
+}
 ?>

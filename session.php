@@ -6,24 +6,26 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <meta charset="utf-8" />
-        <link rel="stylesheet" href="styles.css" />
-        <title>Le-Groupement-Banque-Assurance-Français</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <link rel="stylesheet" href="styles.css">
+      <link rel="icon" href="images/fav_icon_gbaf.png">
+      <title>Le Groupement Banque Assurance Français</title>
     </head>
     
   <body>
         <header id="header">
       <a href="session.php"><img id="logo" src="images/gbaf.png" alt="Logo du GBAF" title="Le Groupement Banque-Assurance Français" /></a> 
       <div id="user">
-         <div class="userImg"><img id="account" src="images/icone_account.png" /></div>
+         <div class="userImg"><img id="account" alt="Icone de l'utilisateur" src="images/icone_account.png" /></div>
          <div id="userLink">   
-           <p><a href="user_form.php"><?php echo htmlspecialchars($bienvenue);?></a></p>
+           <p><a href="user_form.php"><?php echo htmlspecialchars($_SESSION["prenomNom"])?></a></p>
            <p id="deco"><a href="deconnexion.php">Se déconnecter</a></p>
          </div>
       </div>
         </header>
 
-        <main>
+   <main>
         <section id="presentation">
         <h1>Présentation du Groupement Banque Assurance Français</h1>
         <p>Le Groupement Banque Assurance Français (GBAF) est une fédération représentant les 6 grands groupes français :</p>
@@ -41,19 +43,19 @@
         <br><figure id="illustration">
             <img src="images/illustrationfrance.jpg" alt="illustration"/>
         </figure>
-  </section>   
-
-  <section id=acteurs>
-  <h1>Présentation des acteurs et partenaires :</h1>
-  </section>
+   </section>   
+ 
+   <section id=partenaires>
+   <h1>Présentation des acteurs et partenaires :</h1>
+   </section>
+ 
+   <section id=acteurs>
    <div id="conteneur_acteur">
-      
       <div class="acteur">
          <div class="presentation_acteur">
             <figure>
                <img class="logo_acteur" src="images/formation_co.png" alt="logo de l'acteur">
             </figure>
-            <figcaption hidden>Logo de Formation&co</figcaption>
          <div class="description">
          <h3>Formation&co</h3>
          <p><p>Formation&co est une association française présente sur tout le ...</p>
@@ -61,20 +63,15 @@
          </div>
 
          <div class="votesButton">
-          <div class="homeVotes">
-            <p><span class="thumbs-up"></span></p>
-            <p><span class="thumbs-down"></span></p>
-          </div>
           <a class="button" href="page_acteur_formetco.php?id=1">Lire la suite</a>
             </div>
           </div>
 
-          <div class="acteur">
+         <div class="acteur">
          <div class="presentation_acteur">
             <figure>
                <img class="logo_acteur" src="images/protectpeople.png" alt="logo de l'acteur">
             </figure>
-            <figcaption hidden>Logo de Protectpeople</figcaption>
          <div class="description">
          <h3>Protectpeople</h3>
          <p><p>Protectpeople finance la solidarité nationale.</p>
@@ -82,10 +79,6 @@
          </div>
 
          <div class="votesButton">
-          <div class="homeVotes">
-            <p><span class="thumbs-up"></span></p>
-            <p><span class="thumbs-down"></span></p>
-          </div>
           <a class="button" href="page_acteur_protectpeople.php?id=2">Lire la suite</a>
             </div>
           </div>
@@ -95,7 +88,6 @@
             <figure>
                <img class="logo_acteur" src="images/Dsa_france.png" alt="logo de l'acteur">
             </figure>
-            <figcaption hidden>Logo de DSA France</figcaption>
          <div class="description">
          <h3>DSA France</h3>
          <p><p>Dsa France accélère la croissance du territoire et s’engage av...</p>
@@ -103,10 +95,6 @@
          </div>
 
          <div class="votesButton">
-          <div class="homeVotes">
-            <p><span class="thumbs-up"></span></p>
-            <p><span class="thumbs-down"></span></p>
-          </div>
           <a class="button" href="page_acteur_dsafrance.php?id=3">Lire la suite</a>
             </div>
           </div>
@@ -116,7 +104,6 @@
             <figure>
                <img class="logo_acteur" src="images/CDE.png" alt="logo de l'acteur">
             </figure>
-            <figcaption hidden>Logo de CDE</figcaption>
          <div class="description">
          <h3>CDE</h3>
          <p><p>La CDE (Chambre Des Entrepreneurs) accompagne les entreprises dans...</p>
@@ -124,24 +111,19 @@
          </div>
 
          <div class="votesButton">
-          <div class="homeVotes">
-            <p><span class="thumbs-up"></span></p>
-            <p><span class="thumbs-down"></span></p>
-          </div>
           <a class="button" href="page_acteur_cde.php?id=4">Lire la suite</a>
             </div>
           </div>
-   </div>       
+      </div>       
    </section>
-</main>
+   </main>
 
      <footer>
-        <hr class="baliseFooter" />
         <span class="vertical-line"></span> 
-        <a href="https://openclassrooms.com" title="Vous ne le regretterez pas !" style="color:white" >Mentions légales</a>
+        <a href="#" style="color:white" >Mentions légales</a>
         <span class="vertical-line"></span>
-        <a href="https://openclassrooms.com" title="Vous ne le regretterez pas !" style="color:white" >Contact</a>
-        <span class="vertical-line"></span>  
+        <a href="#" style="color:white" >Contact</a>
+        <span class="vertical-line"></span>
      </footer>
   </body>
 </html>
