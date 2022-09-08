@@ -35,13 +35,13 @@
    // Vérifier si l'utilisateur a liké/disliké l'acteur
 
    if($_SESSION["id_user"])
-      $select = $pdo->prepare ("SELECT u.id_user FROM users u INNER JOIN likes l ON u.id_user = l.id_membre WHERE l.id_article = 2");
+      $select = $pdo->prepare ("SELECT u.id_user FROM users u INNER JOIN likes l ON u.id_user = l.id_membre WHERE l.id_membre = ? AND l.id_article = 2");
       $select->execute(array($_SESSION["id_user"]));
     if($select->rowCount() > 0) {
       $select = $select->fetch();
       $message="Vous avez aimé cet acteur.";
     } else {
-      $select = $pdo->prepare ("SELECT u.id_user FROM users u INNER JOIN dislikes d ON u.id_user = d.id_membre WHERE d.id_article = 2");
+      $select = $pdo->prepare ("SELECT u.id_user FROM users u INNER JOIN dislikes d ON u.id_user = d.id_membre WHERE d.id_membre = ? AND d.id_article = 2");
       $select->execute(array($_SESSION["id_user"]));
     if($select->rowCount() > 0) {
       $select = $select->fetch();
