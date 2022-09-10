@@ -46,12 +46,10 @@
          <hr class="baliseHeader">
         </header>
 
-   <!-- Formulaire de connexion -->
-
     <main>
     <div id="container">
     <form name="fo" method="post">
-    <h1>Connection</h1>
+    <h1>Connexion</h1>
     
     <div class="left">
     <label><b>Nom d'utilisateur :</b></label>
@@ -71,7 +69,7 @@
     <p class="box-register2">Mot de passe oublié ? <a href="password_new.php">Créer un nouveau mot de passe</a></p>
     </form>
     </div>
-    </main>
+   
 
     <footer>
         <span class="vertical-line"></span> 
@@ -80,5 +78,6 @@
         <a href="#" style="color:white" >Contact</a>
         <span class="vertical-line"></span>
      </footer>
+     </main>
    </body>
 </html>

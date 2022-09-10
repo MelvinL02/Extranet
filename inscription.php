@@ -62,8 +62,6 @@
          <hr class="baliseHeader">  
         </header>
 
-<!-- Formulaire d'inscription' -->
-
     <main>
     <div id="container">
     <form name="fo" method="post">
@@ -86,7 +84,7 @@
     <input type="password" name="password" placeholder="Mot de passe"></div>
 
     <div class = "left">
-    <label><b>Confirmation du mot de passe :</b></label>
+    <label><b>Confirmation mot de passe :</b></label>
     <input type="password" name="repassword" placeholder="Confirmer le Mot de passe"></div>
     
     <div class = "left">
@@ -94,7 +92,7 @@
     <input type="text" name="question" placeholder="Question"></div>
 
     <div class = "left">
-    <label><b>Réponse à la question secrète :</b></label>
+    <label><b>Réponse secrète :</b></label>
     <input type="text" name="reponse" placeholder="Réponse"></div>
 
     <div class = "center">
