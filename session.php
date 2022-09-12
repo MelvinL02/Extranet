@@ -1,10 +1,11 @@
 <?php
-   session_start();
-   include("variables.php");
+session_start();
+include "variables.php";
 ?>
 
 <!DOCTYPE html>
 <html lang="fr">
+   <!-- En-tête de page -->
     <head>
       <meta charset="utf-8">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
@@ -12,8 +13,9 @@
       <link rel="icon" href="images/fav_icon_gbaf.png">
       <title>Le Groupement Banque Assurance Français</title>
     </head>
-    
+  <!-- Corps de la page -->  
   <body>
+        <!-- Header du site -->
         <header id="header">
       <a href="session.php"><img id="logo" src="images/gbaf.png" alt="Logo du GBAF" title="Le Groupement Banque-Assurance Français" /></a> 
       <div id="user">
@@ -24,7 +26,7 @@
          </div>
       </div>
         </header>
-
+   <!-- Contenu majoritaire du body -->
    <main>
         <section id="presentation">
         <h1>Présentation du Groupement Banque Assurance Français</h1>
@@ -117,7 +119,7 @@
       </div>       
    </section>
    </main>
-
+    <!-- Bas de page -->
      <footer>
         <span class="vertical-line"></span> 
         <a href="#" style="color:white" >Mentions légales</a>
