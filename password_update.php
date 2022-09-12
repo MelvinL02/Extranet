@@ -1,45 +1,43 @@
 <?php
-  session_start();
-  include("connexion.php");
-  
-  $password = sha1($_POST["password"]);
-  $data = $_POST;
-  $message = "";
-  $erreur = "";
+session_start();
+include "connexion.php";
 
-  // Si les champs sont vides = message d'erreur
+$password = sha1($_POST["password"]);
+$data = $_POST;
+$message = "";
+$erreur = "";
 
-  if(empty($data['id_user']) ||
-     empty($data['password']) ||
-     empty($data['repassword'])) {
-    
-    die('Merci de remplir tous les champs !');
-    }
+// Si les champs sont vides = message d'erreur
 
-  if ($data['password'] !== $data['repassword']) {
-    die('Les entrées ne correspondent pas !');   
-  }
+if (
+    empty($data["id_user"]) ||
+    empty($data["password"]) ||
+    empty($data["repassword"])
+) {
+    die("Merci de remplir tous les champs !");
+}
 
-    // Préparation de la requête
+if ($data["password"] !== $data["repassword"]) {
+    die("Les entrées ne correspondent pas !");
+}
 
-    $pdoStat = $pdo->prepare('UPDATE users set password=:password WHERE id_user=:num LIMIT 1');
+// Préparation de la requête
 
-    $pdoStat->bindValue(':num', $_POST['id_user'], PDO::PARAM_INT);
-    $pdoStat->bindValue(':password', $password, PDO::PARAM_STR);
+$pdoStat = $pdo->prepare(
+    "UPDATE users set password=:password WHERE id_user=:num LIMIT 1"
+);
 
-    // Exécution de la requête préparée
+$pdoStat->bindValue(":num", $_POST["id_user"], PDO::PARAM_INT);
+$pdoStat->bindValue(":password", $password, PDO::PARAM_STR);
 
-    $executeIsOk = $pdoStat->execute();
+// Exécution de la requête préparée
 
-  if($executeIsOk){
-      
-   $message = "";
-   header("location:login.php");
+$executeIsOk = $pdoStat->execute();
 
-  } 
-  else{
-
-   $erreur = "Echec de l'envoi";
-
-  }
+if ($executeIsOk) {
+    $message = "";
+    header("location:login.php");
+} else {
+    $erreur = "Echec de l'envoi";
+}
 ?>
